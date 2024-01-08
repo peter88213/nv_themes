@@ -1,0 +1,6 @@
+/build/
+*.pyc
+*.bak
+/test/nv_themes.py
+/test/work/
+
