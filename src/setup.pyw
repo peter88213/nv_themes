@@ -10,7 +10,7 @@ License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 import os
 import sys
 from shutil import copytree
-from shutil import copyfile
+from shutil import copy2
 from pathlib import Path
 try:
     from tkinter import *
@@ -52,7 +52,7 @@ if __name__ == '__main__':
         if os.path.isfile(f'./{PLUGIN}'):
             pluginDir = f'{noveltreeDir}/plugin'
             os.makedirs(pluginDir, exist_ok=True)
-            copyfile(PLUGIN, f'{pluginDir}/{PLUGIN}')
+            copy2(PLUGIN, f'{pluginDir}/{PLUGIN}')
             output(f'Sucessfully installed "{PLUGIN}" at "{os.path.normpath(pluginDir)}"')
         else:
             output(f'ERROR: file "{PLUGIN}" not found.')
