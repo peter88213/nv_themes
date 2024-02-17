@@ -1,8 +1,8 @@
-# noveltree_themes
+# nv_themes
 
 The [noveltree](https://peter88213.github.io/noveltree/) Python program helps authors organize novels.  
 
-*noveltree_themes* is a plugin providing a theme changer dialog. 
+*nv_themes* is a plugin providing a theme changer dialog. 
 
 ![Screenshot](Screenshots/screen01.png)
 
@@ -19,7 +19,7 @@ On Windows, *noveltree* uses a lot of native widgets by default, you can hardly 
 
 ## Download and install
 
-[Download the latest release (version 0.99.0)](https://github.com/peter88213/noveltree_themes/raw/main/dist/nv_themes_v0.99.0.zip)
+[Download the latest release (version 0.99.0)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v0.99.0.zip)
 
 - Extract the "nv_themes_v0.99.0" folder from the downloaded zipfile "nv_themes_v0.99.0.zip".
 - Move into this new folder and launch **setup.pyw**. This installs the plugin for the local user.
@@ -34,6 +34,6 @@ Start the theme changer from the main menu: **Tools > Theme Changer**.
 
 ## License
 
-This is Open Source software, and the *noveltree_themes* plugin is licensed under GPLv3. See the
+This is Open Source software, and the *nv_themes* plugin is licensed under GPLv3. See the
 [GNU General Public License website](https://www.gnu.org/licenses/gpl-3.0.en.html) for more
-details, or consult the [LICENSE](https://github.com/peter88213/noveltree_themes/blob/main/LICENSE) file.
+details, or consult the [LICENSE](https://github.com/peter88213/nv_themes/blob/main/LICENSE) file.
