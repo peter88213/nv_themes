@@ -56,9 +56,9 @@ except:
 class Plugin():
     """A 'Theme Changer' plugin class."""
     VERSION = '@release'
-    NOVELTREE_API = '1.0'
+    NOVELTREE_API = '1.8'
     DESCRIPTION = 'Allows changing between available themes'
-    URL = 'https://peter88213.github.io/nv_themes'
+    URL = 'https://github.com/peter88213/nv_themes'
 
     def install(self, model, view, controller, prefs):
         """Add a submenu to the 'Tools' menu.

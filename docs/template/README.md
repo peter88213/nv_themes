@@ -1,10 +1,10 @@
 # nv_themes
 
-The [noveltree](https://peter88213.github.io/noveltree/) Python program helps authors organize novels.  
+The [noveltree](https://github.com/peter88213/noveltree/) Python program helps authors organize novels.  
 
 *nv_themes* is a plugin providing a theme changer dialog. 
 
-![Screenshot](Screenshots/screen01.png)
+![Screenshot](docs/Screenshots/screen01.png)
 
 ## Side note
 
@@ -14,19 +14,19 @@ On Windows, *noveltree* uses a lot of native widgets by default, you can hardly 
 
 ## Requirements
 
-- [noveltree](https://peter88213.github.io/noveltree/) version 1.0+
+- [noveltree](https://github.com/peter88213/noveltree/) version 1.8+
 - To have a [wider choice](https://ttkthemes.readthedocs.io/en/latest/themes.html), you may want to [install the ttkthemes package](https://ttkthemes.readthedocs.io/en/latest/installation.html).
 
 ## Download and install
 
-[Download the latest release (version 1.0.1)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v1.0.1.zip)
+[Download the latest release (version 0.99.0)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v0.99.0.zip)
 
-- Extract the "nv_themes_v1.0.1" folder from the downloaded zipfile "nv_themes_v1.0.1.zip".
+- Extract the "nv_themes_v0.99.0" folder from the downloaded zipfile "nv_themes_v0.99.0.zip".
 - Move into this new folder and launch **setup.pyw**. This installs the plugin for the local user.
 
 ---
 
-[Changelog](changelog)
+[Changelog](docs/changelog.md)
 
 ## Usage
 
