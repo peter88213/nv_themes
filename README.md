@@ -1,3 +1,8 @@
+[![Download the latest release](docs/img/download-button.png)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v1.1.0.zip)
+[![Changelog](docs/img/changelog-button.png)](docs/changelog.md)
+[![News](docs/img/news-button.png)](https://github.com/peter88213/noveltree/discussions/1)
+
+
 # nv_themes
 
 The [noveltree](https://github.com/peter88213/noveltree/) Python program helps authors organize novels.  
