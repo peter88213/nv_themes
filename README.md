@@ -1,4 +1,4 @@
-[![Download the latest release](docs/img/download-button.png)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v1.1.0.zip)
+[![Download the latest release](docs/img/download-button.png)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v2.0.0.zip)
 [![Changelog](docs/img/changelog-button.png)](docs/changelog.md)
 [![News](docs/img/news-button.png)](https://github.com/peter88213/noveltree/discussions/1)
 
@@ -19,14 +19,14 @@ On Windows, *noveltree* uses a lot of native widgets by default, you can hardly 
 
 ## Requirements
 
-- [noveltree](https://github.com/peter88213/noveltree/) version 1.8+
+- [noveltree](https://github.com/peter88213/noveltree/) version 2.0+
 - To have a [wider choice](https://ttkthemes.readthedocs.io/en/latest/themes.html), you may want to [install the ttkthemes package](https://ttkthemes.readthedocs.io/en/latest/installation.html).
 
 ## Download and install
 
-[Download the latest release (version 1.1.0)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v1.1.0.zip)
+[Download the latest release (version 2.0.0)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v2.0.0.zip)
 
-- Extract the "nv_themes_v1.1.0" folder from the downloaded zipfile "nv_themes_v1.1.0.zip".
+- Extract the "nv_themes_v2.0.0" folder from the downloaded zipfile "nv_themes_v2.0.0.zip".
 - Move into this new folder and launch **setup.pyw**. This installs the plugin for the local user.
 
 ---

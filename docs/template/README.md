@@ -19,7 +19,7 @@ On Windows, *noveltree* uses a lot of native widgets by default, you can hardly 
 
 ## Requirements
 
-- [noveltree](https://github.com/peter88213/noveltree/) version 1.8+
+- [noveltree](https://github.com/peter88213/noveltree/) version 2.0+
 - To have a [wider choice](https://ttkthemes.readthedocs.io/en/latest/themes.html), you may want to [install the ttkthemes package](https://ttkthemes.readthedocs.io/en/latest/installation.html).
 
 ## Download and install
