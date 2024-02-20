@@ -1,4 +1,4 @@
-"""A 'Theme Changer' plugin for noveltree.
+"""A 'Theme Changer' plugin for novelibre.
 
 Version @release
 

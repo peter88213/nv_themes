@@ -1,11 +1,11 @@
 [![Download the latest release](docs/img/download-button.png)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v0.99.0.zip)
 [![Changelog](docs/img/changelog-button.png)](docs/changelog.md)
-[![News](docs/img/news-button.png)](https://github.com/peter88213/noveltree/discussions/1)
+[![News](docs/img/news-button.png)](https://github.com/peter88213/novelibre/discussions/1)
 
 
 # nv_themes
 
-The [noveltree](https://github.com/peter88213/noveltree/) Python program helps authors organize novels.  
+The [novelibre](https://github.com/peter88213/novelibre/) Python program helps authors organize novels.  
 
 *nv_themes* is a plugin providing a theme changer dialog. 
 
@@ -15,11 +15,11 @@ The [noveltree](https://github.com/peter88213/noveltree/) Python program helps a
 
 Actually, the plugin is more intended for Linux, where the default theme looks pretty stale, and there are plenty of desktops, each with a different look.
 
-On Windows, *noveltree* uses a lot of native widgets by default, you can hardly do better with custom themes.
+On Windows, *novelibre* uses a lot of native widgets by default, you can hardly do better with custom themes.
 
 ## Requirements
 
-- [noveltree](https://github.com/peter88213/noveltree/) version 2.0+
+- [novelibre](https://github.com/peter88213/novelibre/) version 2.0+
 - To have a [wider choice](https://ttkthemes.readthedocs.io/en/latest/themes.html), you may want to [install the ttkthemes package](https://ttkthemes.readthedocs.io/en/latest/installation.html).
 
 ## Download and install
