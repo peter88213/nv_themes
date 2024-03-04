@@ -4,11 +4,19 @@
 
 ## Changelog
 
+### v2.1.1
+
+- Move the menu entry above "Options".
+
+Based on novxlib v1.4.2
+Compatibility: novelibre v2.1 API
+
 ### v2.1.0
 
 Update for "novelibre".
 
 Based on novxlib v1.1.0
+Compatibility: novelibre v2.1 API
 
 ### v2.0.0
 

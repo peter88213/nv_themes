@@ -85,10 +85,12 @@ class Plugin():
             self._ui.guiStyle.theme_use(self._prefs['gui_theme'])
 
         # Create a submenu
-        self._ui.viewMenu.add_command(
+        self._ui.viewMenu.insert_command(
+            _('Options'),
             label=_('Change theme'),
             command=lambda: SettingsWindow(self._ui, self._prefs, windowGeometry)
             )
+        self._ui.viewMenu.insert_separator(_('Options'))
 
 
 class LabelCombo(ttk.Frame):
