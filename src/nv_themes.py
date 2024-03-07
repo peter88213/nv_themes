@@ -56,7 +56,7 @@ except:
 class Plugin():
     """A 'Theme Changer' plugin class."""
     VERSION = '@release'
-    API_VERSION = '2.1'
+    API_VERSION = '3.0'
     DESCRIPTION = 'Allows changing between available themes'
     URL = 'https://github.com/peter88213/nv_themes'
 

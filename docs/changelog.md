@@ -4,6 +4,13 @@
 
 ## Changelog
 
+### v3.0.0
+
+- Refactor the code for v3.0 API.
+
+Based on novxlib v2.0.0
+Compatibility: novelibre v3.0 API
+
 ### v2.1.1
 
 - Move the menu entry above "Options".
