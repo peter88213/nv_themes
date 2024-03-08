@@ -3,9 +3,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 3.0.0\n"
-"POT-Creation-Date: 2024-03-07 23:21:36\n"
-"PO-Revision-Date: 2024-03-07 23:21:37\n"
+"Project-Id-Version: 3.0.1\n"
+"POT-Creation-Date: 2024-03-08 08:47:33\n"
+"PO-Revision-Date: 2024-03-08 08:47:33\n"
 "Last-Translator: Peter Triesberger\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 msgid "Change theme"
 msgstr "Designtheme wechseln"
 
-msgid "Exit"
-msgstr "Beenden"
+msgid "Close"
+msgstr "Schließen"
 
 msgid "GUI Theme"
 msgstr "GUI-Theme"

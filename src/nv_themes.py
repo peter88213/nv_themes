@@ -149,7 +149,7 @@ class SettingsWindow(tk.Toplevel):
         themeCombobox.pack(padx=5, pady=5)
 
         # "Exit" button.
-        ttk.Button(window, text=_('Exit'), command=self.destroy).pack(padx=5, pady=5)
+        ttk.Button(window, text=_('Close'), command=self.destroy).pack(padx=5, pady=5)
 
     def _change_theme(self, *args, **kwargs):
         theme = self._theme.get()
