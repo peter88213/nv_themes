@@ -4,6 +4,12 @@
 
 ## Changelog
 
+### v3.0.2
+
+- Move the "Close" button to the right.
+
+Compatibility: novelibre v3.0 API
+
 ### v3.0.1
 
 - Rename the button: "Exit" --> "Close".

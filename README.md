@@ -1,4 +1,4 @@
-[![Download the latest release](docs/img/download-button.png)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v3.0.1.zip)
+[![Download the latest release](docs/img/download-button.png)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v3.0.2.zip)
 [![Changelog](docs/img/changelog-button.png)](docs/changelog.md)
 [![News](docs/img/news-button.png)](https://github.com/peter88213/novelibre/discussions/1)
 
@@ -24,9 +24,9 @@ On Windows, *novelibre* uses a lot of native widgets by default, you can hardly 
 
 ## Download and install
 
-[Download the latest release (version 3.0.1)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v3.0.1.zip)
+[Download the latest release (version 3.0.2)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v3.0.2.zip)
 
-- Extract the "nv_themes_v3.0.1" folder from the downloaded zipfile "nv_themes_v3.0.1.zip".
+- Extract the "nv_themes_v3.0.2" folder from the downloaded zipfile "nv_themes_v3.0.2.zip".
 - Move into this new folder and launch **setup.pyw**. This installs the plugin for the local user.
 
 ---

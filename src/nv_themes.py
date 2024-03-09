@@ -25,12 +25,14 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 """
-import sys
-import os
-import tkinter as tk
-from tkinter import ttk
 import gettext
 import locale
+import os
+import sys
+from tkinter import ttk
+
+import tkinter as tk
+
 try:
     from ttkthemes import ThemedStyle
     extraThemes = True
@@ -148,8 +150,8 @@ class SettingsWindow(tk.Toplevel):
             )
         themeCombobox.pack(padx=5, pady=5)
 
-        # "Exit" button.
-        ttk.Button(window, text=_('Close'), command=self.destroy).pack(padx=5, pady=5)
+        # "Close" button.
+        ttk.Button(window, text=_('Close'), command=self.destroy).pack(side='right', padx=5, pady=5)
 
     def _change_theme(self, *args, **kwargs):
         theme = self._theme.get()
