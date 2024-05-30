@@ -40,21 +40,6 @@ try:
 except ModuleNotFoundError:
     extraThemes = False
 
-# Initialize localization.
-LOCALE_PATH = f'{os.path.dirname(sys.argv[0])}/locale/'
-try:
-    CURRENT_LANGUAGE = locale.getlocale()[0][:2]
-except:
-    # Fallback for old Windows versions.
-    CURRENT_LANGUAGE = locale.getdefaultlocale()[0][:2]
-try:
-    t = gettext.translation('nv_themes', LOCALE_PATH, languages=[CURRENT_LANGUAGE])
-    _ = t.gettext
-except:
-
-    def _(message):
-        return message
-
 
 class Plugin(PluginBase):
     """A 'Theme Changer' plugin class."""
