@@ -19,7 +19,7 @@ On Windows, *novelibre* uses a lot of native widgets by default, you can hardly 
 
 ## Requirements
 
-- [novelibre](https://github.com/peter88213/novelibre/) version 4.0+
+- [novelibre](https://github.com/peter88213/novelibre/) version 4.3+
 - To have a [wider choice](https://ttkthemes.readthedocs.io/en/latest/themes.html), you may want to [install the ttkthemes package](https://ttkthemes.readthedocs.io/en/latest/installation.html).
 
 ## Download and install

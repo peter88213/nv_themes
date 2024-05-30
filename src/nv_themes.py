@@ -29,9 +29,10 @@ import gettext
 import locale
 import os
 import sys
-from tkinter import ttk
 
-import tkinter as tk
+from nvlib.plugin.plugin_base import PluginBase
+from nvthemeslib.nvthemes_globals import _
+from nvthemeslib.settings_window import SettingsWindow
 
 try:
     from ttkthemes import ThemedStyle
@@ -55,10 +56,10 @@ except:
         return message
 
 
-class Plugin():
+class Plugin(PluginBase):
     """A 'Theme Changer' plugin class."""
     VERSION = '@release'
-    API_VERSION = '4.0'
+    API_VERSION = '4.3'
     DESCRIPTION = 'Allows changing between available themes'
     URL = 'https://github.com/peter88213/nv_themes'
 
@@ -66,98 +67,34 @@ class Plugin():
         """Add a submenu to the 'Tools' menu.
         
         Positional arguments:
-            controller -- reference to the main controller instance of the application.
+            model -- reference to the main model instance of the application.
             view -- reference to the main view instance of the application.
+            controller -- reference to the main controller instance of the application.
+            prefs -- reference to the application's global dictionary with settings and options.
+        
+        Overrides the superclass method.
         """
-        self._ui = view
-        self._prefs = prefs
-        __, x, y = self._ui.root.geometry().split('+')
+        prefs = prefs
+        __, x, y = view.root.geometry().split('+')
         offset = 300
         windowGeometry = f'+{int(x)+offset}+{int(y)+offset}'
         if extraThemes:
-            self._ui.guiStyle = ThemedStyle(self._ui.root)
-        if not self._prefs.get('gui_theme', ''):
-            self._prefs['gui_theme'] = self._ui.guiStyle.theme_use()
+            view.guiStyle = ThemedStyle(view.root)
+        if not prefs.get('gui_theme', ''):
+            prefs['gui_theme'] = view.guiStyle.theme_use()
 
-        if not self._prefs['gui_theme'] in self._ui.guiStyle.theme_names():
-            self._prefs['gui_theme'] = self._ui.guiStyle.theme_use()
+        if not prefs['gui_theme'] in view.guiStyle.theme_names():
+            prefs['gui_theme'] = view.guiStyle.theme_use()
         if extraThemes:
-            self._ui.guiStyle.set_theme(self._prefs['gui_theme'])
+            view.guiStyle.set_theme(prefs['gui_theme'])
         else:
-            self._ui.guiStyle.theme_use(self._prefs['gui_theme'])
+            view.guiStyle.theme_use(prefs['gui_theme'])
 
         # Create a submenu
-        self._ui.viewMenu.insert_command(
+        view.viewMenu.insert_command(
             _('Options'),
             label=_('Change theme'),
-            command=lambda: SettingsWindow(self._ui, self._prefs, windowGeometry)
+            command=lambda: SettingsWindow(view, prefs, extraThemes, windowGeometry)
             )
-        self._ui.viewMenu.insert_separator(_('Options'))
-
-
-class LabelCombo(ttk.Frame):
-    """Combobox with a label.
-    
-    Credit goes to user stovfl on stackoverflow
-    https://stackoverflow.com/questions/54584673/how-to-keep-tkinter-button-on-same-row-as-label-and-entry-box
-    """
-
-    def __init__(self, parent, text, textvariable, values, lblWidth=10):
-        super().__init__(parent)
-        self.pack(fill='x')
-        self._label = ttk.Label(self, text=text, anchor='w', width=lblWidth)
-        self._label.pack(side='left')
-        self._combo = ttk.Combobox(self, textvariable=textvariable, values=values)
-        self._combo.pack(side='left', fill='x', expand=True)
-
-    def current(self):
-        """Return the combobox selection."""
-        return self._combo.current()
-
-    def configure(self, text=None, values=None):
-        """Configure internal widgets."""
-        if text is not None:
-            self._label['text'] = text
-        if values is not None:
-            self._combo['values'] = values
-
-
-class SettingsWindow(tk.Toplevel):
-
-    def __init__(self, view, prefs, size, **kw):
-        self._ui = view
-        self._prefs = prefs
-        super().__init__(**kw)
-        self.title(_('Theme Changer'))
-        self.geometry(size)
-        self.grab_set()
-        self.focus()
-        window = ttk.Frame(self)
-        window.pack(fill='both')
-
-        # Combobox for theme setting.
-        theme = self._ui.guiStyle.theme_use()
-        themeList = list(self._ui.guiStyle.theme_names())
-        themeList.sort()
-        self._theme = tk.StringVar(value=theme)
-        self._theme.trace('w', self._change_theme)
-        themeCombobox = LabelCombo(
-            window,
-            text=_('GUI Theme'),
-            textvariable=self._theme,
-            values=themeList,
-            lblWidth=20
-            )
-        themeCombobox.pack(padx=5, pady=5)
-
-        # "Close" button.
-        ttk.Button(window, text=_('Close'), command=self.destroy).pack(side='right', padx=5, pady=5)
-
-    def _change_theme(self, *args, **kwargs):
-        theme = self._theme.get()
-        self._prefs['gui_theme'] = theme
-        if extraThemes:
-            self._ui.guiStyle.set_theme(self._prefs['gui_theme'])
-        else:
-            self._ui.guiStyle.theme_use(self._prefs['gui_theme'])
+        view.viewMenu.insert_separator(_('Options'))
 
