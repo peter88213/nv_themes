@@ -11,7 +11,6 @@ from shutil import copy2
 import zipfile
 import os
 import sys
-import zipfile
 from pathlib import Path
 try:
     from tkinter import *
