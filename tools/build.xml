@@ -34,7 +34,6 @@
 		<copy file="${test-path}/${plugin}.py" todir="${build-path}/${release}" />
 		<replace encoding="utf-8" file="${build-path}/${release}/${plugin}.py" token="@release" value="${version}" />
 		
-      <!--copy file="${source-path}/setup.pyw" todir="${build-path}/${release}" /-->     
       <copy file="${source-path}/setuplib.py" todir="${build-path}/${release}" />     
       <replace encoding="utf-8" file="${build-path}/${release}/setuplib.py" token="@release" value="${version}" />
 
@@ -47,8 +46,6 @@
 			<fileset dir="${i18n-path}/locale" />
 		</copy>
 		
-      <!--zip destfile="${dist-path}/${release}.zip" basedir="${build-path}" /-->
-      
       <exec executable="python" failonerror="true">
          <arg value="-m"/>
          <arg value="zipapp"/>
@@ -69,4 +66,9 @@
       <delete file="${test-path}/${plugin}.py" />
   </target>
 
+   <target name="zip" description="generate a zipfile">      
+      <copy file="${source-path}/setup.pyw" todir="${build-path}/${release}" />     
+      <zip destfile="${dist-path}/${release}.zip" basedir="${build-path}" />
+   </target>
+   
 </project>
