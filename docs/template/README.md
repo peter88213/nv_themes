@@ -1,6 +1,7 @@
 [![Download the latest release](docs/img/download-button.png)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v0.99.0.pyzw)
 [![Changelog](docs/img/changelog-button.png)](docs/changelog.md)
 [![News](docs/img/news-button.png)](https://github.com/peter88213/novelibre/discussions/1)
+[![Online help](docs/img/help-button.png)](docs/nv_themes/)
 
 
 # nv_themes
@@ -13,7 +14,7 @@ The [novelibre](https://github.com/peter88213/novelibre/) Python program helps a
 
 ## Side note
 
-Actually, the plugin is more intended for Linux, where the default theme looks pretty stale, and there are plenty of desktops, each with a different look.
+Actually, this plugin is more intended for Linux, where the default theme looks pretty stale, and there are plenty of desktops, each with a different look.
 
 On Windows, *novelibre* uses a lot of native widgets by default, you can hardly do better with custom themes.
 
@@ -57,7 +58,9 @@ The package is also available in zip format: [nv_themes_v0.99.0.zip](https://git
 
 ## Usage
 
-Start the theme changer from the main menu: **Tools > Theme Changer**.
+See the [online manual](docs/nv_themes/)
+
+---
 
 ## License
 
