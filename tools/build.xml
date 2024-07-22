@@ -38,7 +38,6 @@
       <replace encoding="utf-8" file="${build-path}/${release}/setuplib.py" token="@release" value="${version}" />
 
 		<copy file="../LICENSE" todir="${build-path}/${release}" />	
-		<copy file="../README.md" todir="${build-path}/${release}" />
 		
 		<fixcrlf encoding="utf-8" eol="lf" srcdir="${build-path}/${release}" includes="**/*.*" />				
 		
@@ -67,6 +66,7 @@
   </target>
 
    <target name="zip" description="generate a zipfile">      
+      <copy file="${docs-path}/usage.md" tofile="${build-path}/${release}/README.md" />
       <copy file="${source-path}/setup.pyw" todir="${build-path}/${release}" />     
       <zip destfile="${dist-path}/${release}.zip" basedir="${build-path}" />
    </target>
