@@ -4,77 +4,77 @@
 
 ## Changelog
 
-### v4.1.1
+### Version 4.1.1
 
 - Refactor the code for future API update,
   making the prefs argument of the Plugin.install() method optional.
 
-Compatibility: novelibre v4.3 API
-Based on novxlib v4.1.0
+Compatibility: novelibre version 4.3 API
+Based on novxlib version 4.1.0
 
-### v4.1.0
+### Version 4.1.0
 
 - Refactor the code for better maintainability.
 
-Compatibility: novelibre v4.3 API
-Based on novxlib v4.1.0
+Compatibility: novelibre version 4.3 API
+Based on novxlib version 4.1.0
 
-### v4.0.0
+### Version 4.0.0
 
-Compatibility: novelibre v4.0 API
+Compatibility: novelibre version 4.0 API
 
-### v3.0.2
+### Version 3.0.2
 
 - Move the "Close" button to the right.
 
-Compatibility: novelibre v3.0 API
+Compatibility: novelibre version 3.0 API
 
-### v3.0.1
+### Version 3.0.1
 
 - Rename the button: "Exit" --> "Close".
 
-Compatibility: novelibre v3.0 API
+Compatibility: novelibre version 3.0 API
 
-### v3.0.0
+### Version 3.0.0
 
 - Refactor the code for v3.0 API.
 
-Compatibility: novelibre v3.0 API
+Compatibility: novelibre version 3.0 API
 
-### v2.1.1
+### Version 2.1.1
 
 - Move the menu entry above "Options".
 
-Compatibility: novelibre v2.1 API
+Compatibility: novelibre version 2.1 API
 
-### v2.1.0
+### Version 2.1.0
 
 Update for "novelibre".
 
-Compatibility: novelibre v2.1 API
+Compatibility: novelibre version 2.1 API
 
-### v2.0.0
+### Version 2.0.0
 
 Preparations for renaming the application:
 - Refactor the code for v2.0 API.
 - Change the installation directory in the setup script.
 
-Compatibility: noveltree v2.0 API
+Compatibility: noveltree version 2.0 API
 
-### v1.1.0
+### Version 1.1.0
 
 - Re-structure the website; adjust links.
 
-Compatibility: noveltree v1.8 API
+Compatibility: noveltree version 1.8 API
 
-### v1.0.1
+### Version 1.0.1
 
 - Fix the plugin API version constant.
 
-Compatibility: noveltree v1.0 API
+Compatibility: noveltree version 1.0 API
 
-### v1.0.0
+### Version 1.0.0
 
 - Release under the GPLv3 license.
 
-Compatibility: noveltree v1.0 API
+Compatibility: noveltree version 1.0 API
