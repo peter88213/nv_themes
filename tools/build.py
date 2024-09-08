@@ -1,9 +1,9 @@
-"""Build a nv_themes plugin.
+"""Build the nv_themes novelibre plugin package.
         
 In order to distribute a single script without dependencies, 
 this script "inlines" all modules imported from the novxlib package.
 
-The novxlib project (see https://github.com/peter88213/novxlib)
+The novxlib project (see see https://github.com/peter88213/novxlib)
 must be located on the same directory level as the nv_themes project. 
 
 Copyright (c) 2024 Peter Triesberger
@@ -12,24 +12,23 @@ License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 import os
 import sys
+
 sys.path.insert(0, f'{os.getcwd()}/../../novxlib/src')
-import inliner
+from package_builder import PackageBuilder
 
-SOURCE_DIR = '../src/'
-TEST_DIR = '../test/'
-SOURCE_FILE = f'{SOURCE_DIR}nv_themes.py'
-TEST_FILE = f'{TEST_DIR}nv_themes.py'
+VERSION = '4.1.1'
 
 
-def inline_modules():
-    inliner.run(SOURCE_FILE, TEST_FILE, 'nvthemeslib', '../../nv_themes/src/')
-    inliner.run(TEST_FILE, TEST_FILE, NVLIB, NV_PATH)
-    print('Done.')
+class PluginBuilder(PackageBuilder):
+
+    PRJ_NAME = 'nv_themes'
+    LOCAL_LIB = 'nvthemeslib'
+    GERMAN_TRANSLATION = True
 
 
 def main():
-    os.makedirs(TEST_DIR, exist_ok=True)
-    inline_modules()
+    pb = PluginBuilder(VERSION)
+    pb.run()
 
 
 if __name__ == '__main__':
