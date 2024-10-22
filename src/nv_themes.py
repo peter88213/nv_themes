@@ -25,11 +25,6 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 """
-import gettext
-import locale
-import os
-import sys
-
 from nvlib.plugin.plugin_base import PluginBase
 from nvthemeslib.nvthemes_globals import _
 from nvthemeslib.settings_window import SettingsWindow
