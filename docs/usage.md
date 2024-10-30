@@ -22,7 +22,7 @@ The plugin adds a **Change theme** entry to the *novelibre* **View** menu.
 
 ---
 
-See the [online help](https://github.com/peter88213/nv_themes/tree/main/docs/nv_themes).
+See the [online help](https://peter88213.github.io/nvhelp-en/nv_themes).
 
 ---
 
