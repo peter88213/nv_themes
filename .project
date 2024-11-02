@@ -3,7 +3,6 @@
 	<name>nv_themes</name>
 	<comment></comment>
 	<projects>
-		<project>apptk</project>
 		<project>novelibre</project>
 	</projects>
 	<buildSpec>
