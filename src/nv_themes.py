@@ -43,7 +43,7 @@ class Plugin(PluginBase):
     DESCRIPTION = 'Allows changing between available themes'
     URL = 'https://github.com/peter88213/nv_themes'
 
-    def install(self, model, view, controller, prefs=None):
+    def install(self, model, view, controller):
         """Add a submenu to the 'Tools' menu.
         
         Positional arguments:
