@@ -39,7 +39,7 @@ except ModuleNotFoundError:
 class Plugin(PluginBase):
     """A 'Theme Changer' plugin class."""
     VERSION = '@release'
-    API_VERSION = '4.3'
+    API_VERSION = '5.0'
     DESCRIPTION = 'Allows changing between available themes'
     URL = 'https://github.com/peter88213/nv_themes'
 
