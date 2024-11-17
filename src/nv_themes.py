@@ -54,8 +54,9 @@ class Plugin(PluginBase):
         Optional arguments:
             prefs -- deprecated. Please use controller.get_preferences() instead.
         
-        Overrides the superclass method.
+        Extends the superclass method.
         """
+        super().install(model, view, controller)
         prefs = controller.get_preferences()
         __, x, y = view.root.geometry().split('+')
         offset = 300
