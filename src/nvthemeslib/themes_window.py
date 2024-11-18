@@ -11,13 +11,14 @@ from nvthemeslib.nvthemes_globals import _
 import tkinter as tk
 
 
-class SettingsWindow(tk.Toplevel):
+class ThemesWindow(tk.Toplevel):
 
     def __init__(self, view, prefs, extraThemes, size, **kw):
+        super().__init__(**kw)
+
         self._ui = view
         self._prefs = prefs
         self._extraThemes = extraThemes
-        super().__init__(**kw)
         self.title(_('Theme Changer'))
         self.geometry(size)
         self.grab_set()

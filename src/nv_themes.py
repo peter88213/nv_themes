@@ -27,7 +27,7 @@ GNU General Public License for more details.
 """
 from nvlib.plugin.plugin_base import PluginBase
 from nvthemeslib.nvthemes_globals import _
-from nvthemeslib.settings_window import SettingsWindow
+from nvthemeslib.themes_window import ThemesWindow
 
 try:
     from ttkthemes import ThemedStyle
@@ -77,7 +77,7 @@ class Plugin(PluginBase):
         view.viewMenu.insert_command(
             _('Options'),
             label=_('Change theme'),
-            command=lambda: SettingsWindow(view, prefs, extraThemes, windowGeometry)
+            command=lambda: ThemesWindow(view, prefs, extraThemes, windowGeometry)
             )
         view.viewMenu.insert_separator(_('Options'))
 
