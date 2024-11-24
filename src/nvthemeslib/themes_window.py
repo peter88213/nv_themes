@@ -6,23 +6,21 @@ License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 from tkinter import ttk
 
+from mvclib.view.modal_dialog import ModalDialog
 from mvclib.widgets.label_combo import LabelCombo
 from nvthemeslib.nvthemes_globals import _
 import tkinter as tk
 
 
-class ThemesWindow(tk.Toplevel):
+class ThemesWindow(ModalDialog):
 
-    def __init__(self, view, prefs, extraThemes, size, **kw):
-        super().__init__(**kw)
+    def __init__(self, view, prefs, extraThemes, **kw):
+        super().__init__(view, **kw)
 
         self._ui = view
         self._prefs = prefs
         self._extraThemes = extraThemes
         self.title(_('Theme Changer'))
-        self.geometry(size)
-        self.grab_set()
-        self.focus()
         window = ttk.Frame(self)
         window.pack(fill='both')
 

@@ -58,9 +58,6 @@ class Plugin(PluginBase):
         """
         super().install(model, view, controller)
         prefs = controller.get_preferences()
-        __, x, y = view.root.geometry().split('+')
-        offset = 300
-        windowGeometry = f'+{int(x)+offset}+{int(y)+offset}'
         if extraThemes:
             view.guiStyle = ThemedStyle(view.root)
         if not prefs.get('gui_theme', ''):
@@ -77,7 +74,7 @@ class Plugin(PluginBase):
         view.viewMenu.insert_command(
             _('Options'),
             label=_('Change theme'),
-            command=lambda: ThemesWindow(view, prefs, extraThemes, windowGeometry)
+            command=lambda: ThemesWindow(view, prefs, extraThemes)
             )
         view.viewMenu.insert_separator(_('Options'))
 
