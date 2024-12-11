@@ -26,8 +26,8 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 """
 from nvlib.controller.plugin.plugin_base import PluginBase
-from nvthemeslib.nvthemes_globals import _
-from nvthemeslib.themes_window import ThemesWindow
+from nvthemes.nvthemes_locale import _
+from nvthemes.themes_dialog import ThemesDialog
 
 try:
     from ttkthemes import ThemedStyle
@@ -51,30 +51,34 @@ class Plugin(PluginBase):
             view -- reference to the main view instance of the application.
             controller -- reference to the main controller instance of the application.
 
-        Optional arguments:
-            prefs -- deprecated. Please use controller.get_preferences() instead.
-        
         Extends the superclass method.
         """
         super().install(model, view, controller)
-        prefs = controller.get_preferences()
+        self.prefs = self._ctrl.get_preferences()
+
+        # Set the GUI theme.
         if extraThemes:
             view.guiStyle = ThemedStyle(view.root)
-        if not prefs.get('gui_theme', ''):
-            prefs['gui_theme'] = view.guiStyle.theme_use()
-
-        if not prefs['gui_theme'] in view.guiStyle.theme_names():
-            prefs['gui_theme'] = view.guiStyle.theme_use()
+        if not self.prefs.get('gui_theme', ''):
+            self.prefs['gui_theme'] = view.guiStyle.theme_use()
+        if not self.prefs['gui_theme'] in view.guiStyle.theme_names():
+            self.prefs['gui_theme'] = view.guiStyle.theme_use()
         if extraThemes:
-            view.guiStyle.set_theme(prefs['gui_theme'])
+            view.guiStyle.set_theme(self.prefs['gui_theme'])
         else:
-            view.guiStyle.theme_use(prefs['gui_theme'])
+            view.guiStyle.theme_use(self.prefs['gui_theme'])
 
-        # Create a submenu
+        # Create a submenu.
         view.viewMenu.insert_command(
             _('Options'),
             label=_('Change theme'),
-            command=lambda: ThemesWindow(view, prefs, extraThemes)
+            command=self.start_dialog
             )
         view.viewMenu.insert_separator(_('Options'))
 
+    def start_dialog(self):
+        ThemesDialog(
+            self._ui,
+            self.prefs,
+            extraThemes
+            )

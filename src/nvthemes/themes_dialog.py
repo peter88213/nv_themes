@@ -8,11 +8,11 @@ from tkinter import ttk
 
 from mvclib.view.modal_dialog import ModalDialog
 from mvclib.widgets.label_combo import LabelCombo
-from nvthemeslib.nvthemes_globals import _
+from nvthemes.nvthemes_locale import _
 import tkinter as tk
 
 
-class ThemesWindow(ModalDialog):
+class ThemesDialog(ModalDialog):
 
     def __init__(self, view, prefs, extraThemes, **kw):
         super().__init__(view, **kw)
