@@ -6,8 +6,8 @@ License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 from tkinter import ttk
 
-from mvclib.view.modal_dialog import ModalDialog
-from mvclib.widgets.label_combo import LabelCombo
+from nvlib.gui.widgets.label_combo import LabelCombo
+from nvlib.gui.widgets.modal_dialog import ModalDialog
 from nvthemes.nvthemes_locale import _
 import tkinter as tk
 
