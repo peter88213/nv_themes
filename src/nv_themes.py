@@ -25,8 +25,8 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 """
-from nvlib.controller.plugin.plugin_base import PluginBase
 from nvthemes.nvthemes_locale import _
+from nvlib.controller.plugin.plugin_base import PluginBase
 from nvthemes.themes_dialog import ThemesDialog
 
 try:
