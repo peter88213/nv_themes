@@ -35,12 +35,15 @@ class ThemesDialog(ModalDialog):
             text=_('GUI Theme'),
             textvariable=self._theme,
             values=themeList,
-            lblWidth=20
-            )
+            lblWidth=20,
+        )
         themeCombobox.pack(padx=5, pady=5)
 
         # "Close" button.
-        ttk.Button(window, text=_('Close'), command=self.destroy).pack(side='right', padx=5, pady=5)
+        ttk.Button(
+            window, text=_('Close'),
+            command=self.destroy,
+        ).pack(side='right', padx=5, pady=5)
 
     def _change_theme(self, *args, **kwargs):
         theme = self._theme.get()

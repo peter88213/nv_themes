@@ -47,9 +47,9 @@ class Plugin(PluginBase):
         """Add a submenu to the 'Tools' menu.
         
         Positional arguments:
-            model -- reference to the main model instance of the application.
-            view -- reference to the main view instance of the application.
-            controller -- reference to the main controller instance of the application.
+            model -- reference to the novelibre main model instance.
+            view -- reference to the novelibre main view instance.
+            controller -- reference to the novelibre main controller instance.
 
         Extends the superclass method.
         """
@@ -72,13 +72,13 @@ class Plugin(PluginBase):
         view.viewMenu.insert_command(
             _('Options'),
             label=_('Change theme'),
-            command=self.start_dialog
-            )
+            command=self.start_dialog,
+        )
         view.viewMenu.insert_separator(_('Options'))
 
     def start_dialog(self):
         ThemesDialog(
             self._ui,
             self.prefs,
-            extraThemes
-            )
+            extraThemes,
+        )
