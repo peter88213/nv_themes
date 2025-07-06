@@ -15,7 +15,12 @@ from pathlib import Path
 try:
     from tkinter import *
 except ModuleNotFoundError:
-    print('The tkinter module is missing. Please install the tk support package for your python3 version.')
+    print(
+        (
+            'The tkinter module is missing. '
+            'Please install the tk support package for your python3 version.'
+        )
+    )
     sys.exit(1)
 
 PLUGIN = 'nv_themes.py'
@@ -83,10 +88,20 @@ def main(zipped=True):
         output(f'Copying locale ...')
         copy_tree('locale', applicationDir)
 
-        output(f'Sucessfully installed "{PLUGIN}" at "{os.path.normpath(pluginDir)}"')
+        # Show a success message.
+        output(
+            (
+                f'Sucessfully installed "{PLUGIN}" '
+                f'at "{os.path.normpath(pluginDir)}".'
+            )
+        )
     else:
-        output(f'ERROR: Cannot find a novelibre installation at "{applicationDir}"')
-
+        output(
+            (
+                'ERROR: Cannot find a novelibre installation '
+                f'at "{os.path.normpath(applicationDir)}".'
+            )
+        )
     # Check, whether the ttkthemes package is available.
     try:
         from ttkthemes import ThemedStyle
