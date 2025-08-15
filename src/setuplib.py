@@ -79,4 +79,4 @@ def main(zipped=True):
     except ModuleNotFoundError:
         print('\nTo have a wider choice, you may want to install the ttkthemes package.\n')
 
-    input('Press any key to quit.')
+    input('Press ENTER to quit.')
