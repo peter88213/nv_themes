@@ -12,6 +12,14 @@ The [novelibre](https://github.com/peter88213/novelibre/) Python program helps a
 
 ![Screenshot](docs/Screenshots/screen01.png)
 
+## If you just want a dark mode
+
+If you just want a dark mode for *novelibre*, do install the 
+[nv_dark](https://github.com/peter88213/nv_dark/) plugin instead of *nv_themes*.
+Changing the theme is not enough to get a dark mode. 
+You also need a modified color palette so that the colored text stands out 
+against the dark background. *nv_dark* comes with such a color palette. 
+
 ## Side note
 
 Actually, this plugin is more intended for Linux, where the default theme looks pretty stale, and there are plenty of desktops, each with a different look.
