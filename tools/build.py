@@ -12,7 +12,7 @@ import sys
 sys.path.insert(0, f'{os.getcwd()}/../../novelibre/tools')
 from package_builder import PackageBuilder
 
-VERSION = '5.0.3'
+VERSION = '5.0.4'
 
 
 class PluginBuilder(PackageBuilder):
@@ -20,6 +20,15 @@ class PluginBuilder(PackageBuilder):
     PRJ_NAME = 'nv_themes'
     LOCAL_LIB = 'nvthemes'
     GERMAN_TRANSLATION = True
+
+    def __init__(self, version):
+        super().__init__(version)
+        self.distFiles.append(
+            (f'{self.sourceDir}set_dark_mode_colors.py', self.buildDir)
+        )
+        self.distFiles.append(
+            (f'{self.sourceDir}restore_default_colors.py', self.buildDir)
+        )
 
 
 def main():
