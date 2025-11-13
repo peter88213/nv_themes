@@ -40,16 +40,15 @@ Download the latest release [nv_themes_v5.0.3.pyz](https://github.com/peter88213
 - Launch *nv_themes_v5.0.3.pyz* by double-clicking (Windows desktop),
 - or execute `python nv_themes_v5.0.3.pyz` (Windows), resp. `python3 nv_themes_v5.0.3.pyz` (Linux) on the command line.
 
-#### Important
-
-Many web browsers recognize the download as an executable file and offer to open it immediately. 
-This starts the installation under Windows.
-
-However, depending on your security settings, your browser may 
-initially  refuse  to download the executable file. 
-In this case, your confirmation or an additional action is required. 
-If this is not possible, you have the option of downloading 
-the zip file. 
+> [!IMPORTANT]
+> Many web browsers recognize the download as an executable file and offer to open it immediately. 
+> This starts the installation under Windows.
+> 
+> However, depending on your security settings, your browser may 
+> initially  refuse  to download the executable file. 
+> In this case, your confirmation or an additional action is required. 
+> If this is not possible, you have the option of downloading 
+> the zip file. 
 
 
 ### Alternative: Zip file
