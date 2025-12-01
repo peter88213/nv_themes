@@ -68,10 +68,13 @@ class Plugin(PluginBase):
         else:
             view.guiStyle.theme_use(self.prefs['gui_theme'])
 
+        #--- Configure the main menu.
+
         # Create a submenu.
+        label = _('Change theme')
         view.viewMenu.insert_command(
             _('Options'),
-            label=_('Change theme'),
+            label=label,
             command=self.start_dialog,
         )
         view.viewMenu.insert_separator(_('Options'))
