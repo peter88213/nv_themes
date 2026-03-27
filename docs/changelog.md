@@ -4,12 +4,21 @@
 
 ## Changelog
 
+
+### Version 5.0.4
+
+- Refactored the code for better maintainability
+  and smaller size.
+
+API: 5.0
+Based on novelibre 5.54.3
+
 ### Version 5.0.3
 
 - Refactored the code for better maintainability.
 
 API: 5.0
-Based on novelibre 5.54.3
+Based on novelibre 5.30.0
 
 ### Version 5.0.2
 
