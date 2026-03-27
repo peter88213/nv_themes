@@ -54,8 +54,11 @@ class ThemesDialog(ModalDialog):
     def _change_theme(self, *args, **kwargs):
         theme = self._theme.get()
         self._prefs['gui_theme'] = theme
-        if self._extraThemes:
-            self._ui.guiStyle.set_theme(self._prefs['gui_theme'])
-        else:
-            self._ui.guiStyle.theme_use(self._prefs['gui_theme'])
+        try:
+            if self._extraThemes:
+                self._ui.guiStyle.set_theme(self._prefs['gui_theme'])
+            else:
+                self._ui.guiStyle.theme_use(self._prefs['gui_theme'])
+        except:
+            pass
 

@@ -5,6 +5,14 @@
 ## Changelog
 
 
+### Version 5.0.5
+
+- Fixed a bug in the themes dialog where entering a string in the
+"GUI theme" combobox may cause an exception.
+
+API: 5.0
+Based on novelibre 5.54.3
+
 ### Version 5.0.4
 
 - Refactored the code for better maintainability

@@ -1,4 +1,4 @@
-[![Download the latest release](docs/img/download-button.png)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.0.4.pyz)
+[![Download the latest release](docs/img/download-button.png)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.0.5.pyz)
 [![Changelog](docs/img/changelog-button.png)](docs/changelog.md)
 [![News/Feedback](docs/img/news-button.png)](https://github.com/peter88213/novelibre/discussions)
 [![Online help](docs/img/help-button.png)](https://peter88213.github.io/nvhelp-en/nv_themes/)
@@ -35,10 +35,10 @@ On Windows, *novelibre* uses a lot of native widgets by default, you can hardly 
 
 ### Default: Executable Python zip archive
 
-Download the latest release [nv_themes_v5.0.4.pyz](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.0.4.pyz)
+Download the latest release [nv_themes_v5.0.5.pyz](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.0.5.pyz)
 
-- Launch *nv_themes_v5.0.4.pyz* by double-clicking (Windows desktop),
-- or execute `python nv_themes_v5.0.4.pyz` (Windows), resp. `python3 nv_themes_v5.0.4.pyz` (Linux) on the command line.
+- Launch *nv_themes_v5.0.5.pyz* by double-clicking (Windows desktop),
+- or execute `python nv_themes_v5.0.5.pyz` (Windows), resp. `python3 nv_themes_v5.0.5.pyz` (Linux) on the command line.
 
 > [!IMPORTANT]
 > Many web browsers recognize the download as an executable file and offer to open it immediately. 
@@ -53,9 +53,9 @@ Download the latest release [nv_themes_v5.0.4.pyz](https://github.com/peter88213
 
 ### Alternative: Zip file
 
-The package is also available in zip format: [nv_themes_v5.0.4.zip](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.0.4.zip)
+The package is also available in zip format: [nv_themes_v5.0.5.zip](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.0.5.zip)
 
-- Extract the *nv_themes_v5.0.4* folder from the downloaded zipfile "nv_themes_v5.0.4.zip".
+- Extract the *nv_themes_v5.0.5* folder from the downloaded zipfile "nv_themes_v5.0.5.zip".
 - Move into this new folder and launch *setup.py* by double-clicking (Windows/Linux desktop), 
 - or execute `python setup.py` (Windows), resp. `python3 setup.py` (Linux) on the command line.
 
