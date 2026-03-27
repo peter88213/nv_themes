@@ -6,7 +6,6 @@ License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 from tkinter import ttk
 
-from nvlib.gui.widgets.label_combo import LabelCombo
 from nvlib.gui.widgets.modal_dialog import ModalDialog
 from nvthemes.nvthemes_locale import _
 import tkinter as tk
@@ -25,17 +24,24 @@ class ThemesDialog(ModalDialog):
         window.pack(fill='both')
 
         # Combobox for theme setting.
+        themeFrame = ttk.Frame(window)
+        themeFrame.pack(fill='x', expand=True, pady=2)
+        ttk.Label(
+            themeFrame,
+            text=_('GUI Theme'),
+            anchor='w',
+            width=20,
+        ).pack(side='left')
+
         theme = self._ui.guiStyle.theme_use()
         themeList = list(self._ui.guiStyle.theme_names())
         themeList.sort()
         self._theme = tk.StringVar(value=theme)
         self._theme.trace('w', self._change_theme)
-        themeCombobox = LabelCombo(
-            window,
-            text=_('GUI Theme'),
+        themeCombobox = ttk.Combobox(
+            themeFrame,
             textvariable=self._theme,
             values=themeList,
-            lblWidth=20,
         )
         themeCombobox.pack(padx=5, pady=5)
 
