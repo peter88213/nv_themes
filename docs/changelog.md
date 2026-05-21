@@ -4,6 +4,14 @@
 
 ## Changelog
 
+### Version 5.0.6
+
+Refactored the code for Python 3.14.
+
+- No longer using the deprecated tkinter `trace()` method.
+
+API: 5.0
+Based on novelibre 5.56.9
 
 ### Version 5.0.5
 

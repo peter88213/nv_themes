@@ -37,7 +37,7 @@ class ThemesDialog(ModalDialog):
         themeList = list(self._ui.guiStyle.theme_names())
         themeList.sort()
         self._theme = tk.StringVar(value=theme)
-        self._theme.trace('w', self._change_theme)
+        self._theme.trace_add('write', self._change_theme)
         themeCombobox = ttk.Combobox(
             themeFrame,
             textvariable=self._theme,
