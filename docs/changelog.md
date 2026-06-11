@@ -4,6 +4,11 @@
 
 ## Changelog
 
+### Version 5.0.7
+
+Refactored the code for smaller size.
+
+
 ### Version 5.0.6
 
 Refactored the code for Python 3.14.
