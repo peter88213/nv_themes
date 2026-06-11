@@ -8,6 +8,9 @@
 
 Refactored the code for smaller size.
 
+API: 5.0
+Based on novelibre 5.59.0
+
 
 ### Version 5.0.6
 
