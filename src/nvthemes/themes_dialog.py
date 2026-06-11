@@ -16,14 +16,23 @@ class ThemesDialog(ModalDialog):
     def __init__(self, view, prefs, extraThemes, **kw):
         super().__init__(view, **kw)
 
-        self._ui = view
-        self._prefs = prefs
-        self._extraThemes = extraThemes
         self.title(_('Theme Changer'))
         window = ttk.Frame(self)
         window.pack(fill='both')
 
         # Combobox for theme setting.
+
+        def change_theme(event):
+            theme = themeVar.get()
+            prefs['gui_theme'] = theme
+            try:
+                if extraThemes:
+                    view.guiStyle.set_theme(prefs['gui_theme'])
+                else:
+                    view.guiStyle.theme_use(prefs['gui_theme'])
+            except:
+                pass
+
         themeFrame = ttk.Frame(window)
         themeFrame.pack(fill='x', expand=True, pady=2)
         ttk.Label(
@@ -33,32 +42,21 @@ class ThemesDialog(ModalDialog):
             width=20,
         ).pack(side='left')
 
-        theme = self._ui.guiStyle.theme_use()
-        themeList = list(self._ui.guiStyle.theme_names())
+        theme = view.guiStyle.theme_use()
+        themeList = list(view.guiStyle.theme_names())
         themeList.sort()
-        self._theme = tk.StringVar(value=theme)
-        self._theme.trace_add('write', self._change_theme)
+        themeVar = tk.StringVar(value=theme)
         themeCombobox = ttk.Combobox(
             themeFrame,
-            textvariable=self._theme,
+            textvariable=themeVar,
             values=themeList,
         )
         themeCombobox.pack(padx=5, pady=5)
+        themeCombobox.bind('<<ComboboxSelected>>', change_theme)
 
         # "Close" button.
         ttk.Button(
             window, text=_('Close'),
             command=self.destroy,
         ).pack(side='right', padx=5, pady=5)
-
-    def _change_theme(self, *args, **kwargs):
-        theme = self._theme.get()
-        self._prefs['gui_theme'] = theme
-        try:
-            if self._extraThemes:
-                self._ui.guiStyle.set_theme(self._prefs['gui_theme'])
-            else:
-                self._ui.guiStyle.theme_use(self._prefs['gui_theme'])
-        except:
-            pass
 
