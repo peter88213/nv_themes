@@ -44,7 +44,7 @@ class Plugin(PluginBase):
     URL = 'https://github.com/peter88213/nv_themes'
 
     def install(self, model, view, controller):
-        """Add a submenu to the 'Tools' menu.
+        """Install the plugin at runtime.
         
         Positional arguments:
             model -- reference to the novelibre main model instance.
@@ -70,7 +70,7 @@ class Plugin(PluginBase):
 
         #--- Configure the main menu.
 
-        # Create a submenu.
+        # Add an entry to the View menu.
         label = _('Change theme')
         view.viewMenu.insert_command(
             _('Options'),
