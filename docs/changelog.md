@@ -4,6 +4,15 @@
 
 ## Changelog
 
+
+### Version 5.0.9
+
+- Refactored the code.
+
+API: 5.0
+Based on novelibre 5.63.1
+
+
 ### Version 5.0.8
 
 - Keeping the modal dialog always in front.

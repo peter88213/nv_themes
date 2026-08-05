@@ -68,20 +68,21 @@ class Plugin(PluginBase):
         else:
             view.guiStyle.theme_use(self.prefs['gui_theme'])
 
-        #--- Configure the main menu.
+        #--- Configure the user interface.
+
+        def start_dialog():
+            ThemesDialog(
+                self._ui,
+                self.prefs,
+                extraThemes,
+            )
 
         # Add an entry to the View menu.
         label = _('Change theme')
         view.viewMenu.insert_command(
             _('Options'),
             label=label,
-            command=self.start_dialog,
+            command=start_dialog,
         )
         view.viewMenu.insert_separator(_('Options'))
 
-    def start_dialog(self):
-        ThemesDialog(
-            self._ui,
-            self.prefs,
-            extraThemes,
-        )
