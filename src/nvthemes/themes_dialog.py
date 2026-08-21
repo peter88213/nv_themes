@@ -17,9 +17,6 @@ class ThemesDialog(ModalDialog):
         super().__init__(view, **kw)
 
         self.title(_('Theme Changer'))
-        window = ttk.Frame(self)
-        window.pack(fill='both')
-
         # Combobox for theme setting.
 
         def change_theme(event):
@@ -33,14 +30,17 @@ class ThemesDialog(ModalDialog):
             except:
                 pass
 
-        themeFrame = ttk.Frame(window)
+        themeFrame = ttk.Frame(self)
         themeFrame.pack(fill='x', expand=True, pady=2)
         ttk.Label(
             themeFrame,
             text=_('GUI Theme'),
             anchor='w',
             width=20,
-        ).pack(side='left')
+        ).pack(
+            side='left',
+            padx=5,
+        )
 
         theme = view.guiStyle.theme_use()
         themeList = list(view.guiStyle.theme_names())
@@ -54,9 +54,13 @@ class ThemesDialog(ModalDialog):
         themeCombobox.pack(padx=5, pady=5)
         themeCombobox.bind('<<ComboboxSelected>>', change_theme)
 
+        footer = tk.Frame(self)
+        footer.pack(fill='both')
+
         # "Close" button.
         ttk.Button(
-            window, text=_('Close'),
+            footer,
+            text=_('Close'),
             command=self.destroy,
         ).pack(side='right', padx=5, pady=5)
 
