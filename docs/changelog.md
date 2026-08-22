@@ -5,6 +5,14 @@
 ## Changelog
 
 
+### Version 5.0.10
+
+- Refactored the code.
+
+API: 5.0
+Based on novelibre 5.65.1
+
+
 ### Version 5.0.9
 
 - Refactored the code.
