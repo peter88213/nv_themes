@@ -10,7 +10,9 @@ import os
 from pathlib import Path
 from shutil import copy2
 from shutil import copytree
+import shutil
 import sys
+from tkinter import messagebox
 import zipfile
 
 PLUGIN = 'nv_themes.py'
@@ -35,6 +37,37 @@ def cp_tree(sourceDir, targetDir):
     copytree(sourceDir, f'{targetDir}/{sourceDir}', dirs_exist_ok=True)
 
 
+def handle_incompatible_plugins(applicationDir, pluginDir):
+    # Uninstall nv_dark, if any.
+    nvDarkPlugin = f'{pluginDir}/nv_dark.py'
+    if os.path.isfile(nvDarkPlugin):
+        if not messagebox.askokcancel(
+            title='nv_themes setup',
+            message='Incompatible plugin detected',
+            detail='The "nv_dark" plugin will now be uninstalled.',
+        ):
+            sys.exit()
+
+        print('Removing the nv_dark plugin ...')
+        os.remove(nvDarkPlugin)
+        print('Removing the awthemes package ...')
+        shutil.rmtree(
+            f'{applicationDir}/themes/awthemes',
+            ignore_errors=True
+        )
+        print('Restoring the novelibre default colors ...')
+        configFile = f'{applicationDir}/config/novx.ini'
+        with open(configFile, 'r', encoding='utf-8') as f:
+            lines = f.read().split('\n')
+        newlines = []
+        for line in lines:
+            if not line.startswith('color_'):
+                newlines.append(line)
+        with open(configFile, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(newlines))
+        print('Default colors successfully restored.')
+
+
 def install(zipped):
     if zipped:
         copy_file = extract_file
@@ -52,6 +85,7 @@ def install(zipped):
     applicationDir = f'{homePath}/.novx'
     if os.path.isdir(applicationDir):
         pluginDir = f'{applicationDir}/plugin'
+        handle_incompatible_plugins(applicationDir, pluginDir)
         os.makedirs(pluginDir, exist_ok=True)
 
         # Install the plugin.
