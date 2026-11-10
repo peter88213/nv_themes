@@ -32,9 +32,10 @@ from nvthemes.themes_dialog import ThemesDialog
 
 try:
     from ttkthemes import ThemedStyle
-    ttkThemesAvailable = True
 except ModuleNotFoundError:
     ttkThemesAvailable = False
+else:
+    ttkThemesAvailable = True
 
 
 class Plugin(PluginBase):

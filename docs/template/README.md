@@ -12,13 +12,16 @@ The [novelibre](https://github.com/peter88213/novelibre/) Python program helps a
 
 ![Screenshot](docs/Screenshots/screen01.png)
 
-## If you just want a dark mode
+## If you want a dark mode
 
-If you just want a dark mode for *novelibre*, do install the 
-[nv_dark](https://github.com/peter88213/nv_dark/) plugin instead of *nv_themes*.
-Changing the theme is not enough to get a dark mode. 
-You also need a modified color palette so that the colored text stands out 
-against the dark background. *nv_dark* comes with such a color palette. 
+The *ttkthemes* package (see below) comes with the **black** theme, which works quite well under Windows. 
+
+![Screenshot](docs/Screenshots/screen02.png)
+
+Under Linux, you can choose between the **black** theme and the **equilux** theme. 
+
+When switching between a dark and a bright mode theme with *nv_themes*, you may be prompted to restart *novelibre* 
+in order to apply an adapted color palette. 
 
 ## Side note
 
@@ -29,7 +32,8 @@ On Windows, *novelibre* uses a lot of native widgets by default, you can hardly 
 ## Requirements
 
 - [novelibre](https://github.com/peter88213/novelibre/) version $ApiVersion+
-- To have a [wider choice](https://ttkthemes.readthedocs.io/en/latest/themes.html), you may want to [install the ttkthemes package](https://ttkthemes.readthedocs.io/en/latest/installation.html).
+- To have a [wider choice](https://ttkthemes.readthedocs.io/en/latest/themes.html), you may want to install the *ttkthemes* package: 
+  In your Python terminal, type `pip install ttkthemes`. 
 
 ## Download and install
 
