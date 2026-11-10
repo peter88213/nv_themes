@@ -93,3 +93,4 @@ class Plugin(PluginBase):
         prefs = self._ctrl.get_preferences()
         for color in DEFAULT_COLORS:
             prefs[color] = DEFAULT_COLORS[color]
+        prefs['gui_theme'] = ''

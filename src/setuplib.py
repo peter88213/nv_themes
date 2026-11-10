@@ -61,7 +61,7 @@ def handle_incompatible_plugins(applicationDir, pluginDir):
             lines = f.read().split('\n')
         newlines = []
         for line in lines:
-            if not line.startswith('color_'):
+            if not line.startswith('color_') and not line.startswith('gui_theme'):
                 newlines.append(line)
         with open(configFile, 'w', encoding='utf-8') as f:
             f.write('\n'.join(newlines))
