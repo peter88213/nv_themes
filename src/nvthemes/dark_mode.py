@@ -39,7 +39,7 @@ class DarkMode:
         color_status_notification_fg='#000000',  # black
         color_status_success_bg='#008b00',  # green4
         color_status_success_fg='#ffffff',  # white
-        color_text_bg='#33393b',
+        color_text_bg='#424242',
         color_text_fg='#d3d3d3',  # light gray
         color_unused='#808080',
         color_xml_tag='#6495ed',  # cornflower blue
