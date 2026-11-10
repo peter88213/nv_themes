@@ -5,6 +5,14 @@
 ## Changelog
 
 
+### Version 5.1.1
+
+- Adapted the color palette to the "black" theme.
+
+API: 5.67
+Based on novelibre 5.67.4
+
+
 ### Version 5.1.0
 
 - Supporting the dark themes.
