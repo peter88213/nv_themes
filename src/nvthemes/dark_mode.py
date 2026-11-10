@@ -46,7 +46,7 @@ class DarkMode:
     )
 
     @classmethod
-    def start(cls, prefs):
+    def set_colors(cls, prefs):
         """Set colors for a dark mode."""
         colorsChanged = False
         for color in cls.COLORS:
@@ -60,7 +60,7 @@ class DarkMode:
             cls._show_message(_('Dark mode selected'))
 
     @classmethod
-    def stop(cls, prefs):
+    def reset_colors(cls, prefs):
         """Reset colors to defaults"""
         colorsChanged = False
         for color in cls.COLORS:

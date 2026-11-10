@@ -19,19 +19,20 @@ class ThemesDialog(ModalDialog):
         'equilux',
     )
 
-    def __init__(self, view, prefs, extraThemes, **kw):
+    def __init__(self, view, prefs, ttkThemesAvailable, **kw):
         super().__init__(view, **kw)
 
         self.protocol("WM_DELETE_WINDOW", self._on_close)
         self._prefs = prefs
         self.title(_('Theme Changer'))
+
         # Combobox for theme setting.
 
         def change_theme(event):
             theme = self._themeVar.get()
             prefs['gui_theme'] = theme
             try:
-                if extraThemes:
+                if ttkThemesAvailable:
                     view.guiStyle.set_theme(prefs['gui_theme'])
                 else:
                     view.guiStyle.theme_use(prefs['gui_theme'])
@@ -74,8 +75,8 @@ class ThemesDialog(ModalDialog):
 
     def _on_close(self, event=None):
         if self._themeVar.get() in self.DARK_THEMES:
-            DarkMode.start(self._prefs)
+            DarkMode.set_colors(self._prefs)
         else:
-            DarkMode.stop(self._prefs)
+            DarkMode.reset_colors(self._prefs)
         self.destroy()
 

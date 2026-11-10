@@ -32,9 +32,9 @@ from nvthemes.themes_dialog import ThemesDialog
 
 try:
     from ttkthemes import ThemedStyle
-    extraThemes = True
+    ttkThemesAvailable = True
 except ModuleNotFoundError:
-    extraThemes = False
+    ttkThemesAvailable = False
 
 
 class Plugin(PluginBase):
@@ -58,13 +58,13 @@ class Plugin(PluginBase):
         self.prefs = self._ctrl.get_preferences()
 
         # Set the GUI theme.
-        if extraThemes:
+        if ttkThemesAvailable:
             view.guiStyle = ThemedStyle(view.root)
         if not self.prefs.get('gui_theme', ''):
             self.prefs['gui_theme'] = view.guiStyle.theme_use()
         if not self.prefs['gui_theme'] in view.guiStyle.theme_names():
             self.prefs['gui_theme'] = view.guiStyle.theme_use()
-        if extraThemes:
+        if ttkThemesAvailable:
             view.guiStyle.set_theme(self.prefs['gui_theme'])
         else:
             view.guiStyle.theme_use(self.prefs['gui_theme'])
@@ -75,7 +75,7 @@ class Plugin(PluginBase):
             ThemesDialog(
                 self._ui,
                 self.prefs,
-                extraThemes,
+                ttkThemesAvailable,
             )
 
         # Add an entry to the View menu.
