@@ -5,6 +5,14 @@
 ## Changelog
 
 
+### Version 5.1.0
+
+- Supporting the dark themes.
+
+API: 5.67
+Based on novelibre 5.67.4
+
+
 ### Version 5.0.10
 
 - Refactored the code.

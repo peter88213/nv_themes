@@ -1,4 +1,4 @@
-[![Download the latest release](docs/img/download-button.png)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.0.10.pyz)
+[![Download the latest release](docs/img/download-button.png)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.1.0.pyz)
 [![Changelog](docs/img/changelog-button.png)](docs/changelog.md)
 [![News/Feedback](docs/img/news-button.png)](https://github.com/peter88213/novelibre/discussions)
 [![Online help](docs/img/help-button.png)](https://peter88213.github.io/nvhelp-en/nv_themes/)
@@ -12,13 +12,16 @@ The [novelibre](https://github.com/peter88213/novelibre/) Python program helps a
 
 ![Screenshot](docs/Screenshots/screen01.png)
 
-## If you just want a dark mode
+## If you want a dark mode
 
-If you just want a dark mode for *novelibre*, do install the 
-[nv_dark](https://github.com/peter88213/nv_dark/) plugin instead of *nv_themes*.
-Changing the theme is not enough to get a dark mode. 
-You also need a modified color palette so that the colored text stands out 
-against the dark background. *nv_dark* comes with such a color palette. 
+The *ttkthemes* package (see below) comes with the **black** theme, which works quite well under Windows. 
+
+![Screenshot](docs/Screenshots/screen02.png)
+
+Under Linux, you can choose between the **black** theme and the **equilux** theme. 
+
+When switching between a dark and a bright mode theme with *nv_themes*, you may be prompted to restart *novelibre* 
+in order to apply an adapted color palette. 
 
 ## Side note
 
@@ -28,17 +31,18 @@ On Windows, *novelibre* uses a lot of native widgets by default, you can hardly 
 
 ## Requirements
 
-- [novelibre](https://github.com/peter88213/novelibre/) version 5.0+
-- To have a [wider choice](https://ttkthemes.readthedocs.io/en/latest/themes.html), you may want to [install the ttkthemes package](https://ttkthemes.readthedocs.io/en/latest/installation.html).
+- [novelibre](https://github.com/peter88213/novelibre/) version 5.67+
+- To have a [wider choice](https://ttkthemes.readthedocs.io/en/latest/themes.html), you may want to install the *ttkthemes* package: 
+  In your Python terminal, type `pip install ttkthemes`. 
 
 ## Download and install
 
 ### Default: Executable Python zip archive
 
-Download the latest release [nv_themes_v5.0.10.pyz](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.0.10.pyz) (15 KB)
+Download the latest release [nv_themes_v5.1.0.pyz](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.1.0.pyz) (17 KB)
 
-- Launch *nv_themes_v5.0.10.pyz* by double-clicking (Windows desktop),
-- or execute `python nv_themes_v5.0.10.pyz` (Windows), resp. `python3 nv_themes_v5.0.10.pyz` (Linux) on the command line.
+- Launch *nv_themes_v5.1.0.pyz* by double-clicking (Windows desktop),
+- or execute `python nv_themes_v5.1.0.pyz` (Windows), resp. `python3 nv_themes_v5.1.0.pyz` (Linux) on the command line.
 
 > [!IMPORTANT]
 > Many web browsers recognize the download as an executable file and offer to open it immediately. 
@@ -53,9 +57,9 @@ Download the latest release [nv_themes_v5.0.10.pyz](https://github.com/peter8821
 
 ### Alternative: Zip file
 
-The package is also available in zip format: [nv_themes_v5.0.10.zip](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.0.10.zip) (15 KB)
+The package is also available in zip format: [nv_themes_v5.1.0.zip](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.1.0.zip) (18 KB)
 
-- Extract the *nv_themes_v5.0.10* folder from the downloaded zipfile "nv_themes_v5.0.10.zip".
+- Extract the *nv_themes_v5.1.0* folder from the downloaded zipfile "nv_themes_v5.1.0.zip".
 - Move into this new folder and launch *setup.py* by double-clicking (Windows/Linux desktop), 
 - or execute `python setup.py` (Windows), resp. `python3 setup.py` (Linux) on the command line.
 
