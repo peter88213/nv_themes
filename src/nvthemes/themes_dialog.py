@@ -22,6 +22,7 @@ class ThemesDialog(ModalDialog):
     def __init__(self, view, prefs, extraThemes, **kw):
         super().__init__(view, **kw)
 
+        self.protocol("WM_DELETE_WINDOW", self._on_close)
         self._prefs = prefs
         self.title(_('Theme Changer'))
         # Combobox for theme setting.
