@@ -28,7 +28,9 @@ Under Linux, you can choose between the *black* theme and the *equilux* theme.
 ## Requirements
 
 - [novelibre](https://github.com/peter88213/novelibre/) version $ApiVersion+
-- To have a [wider choice](https://ttkthemes.readthedocs.io/en/latest/themes.html), you may want to install the *ttkthemes* package. 
+- To have a [wider choice](https://ttkthemes.readthedocs.io/en/latest/themes.html), you may want to 
+  [install](https://peter88213.github.io/nvhelp-en/nv_themes/#install-additional-themes) 
+  the *ttkthemes* package. 
 
 ## Download and install
 
