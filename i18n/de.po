@@ -3,9 +3,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 5.0.10\n"
+"Project-Id-Version: 5.1.0\n"
 "POT-Creation-Date: 2025-08-16 15:22:47\n"
-"PO-Revision-Date: 2026-08-21 22:28:28\n"
+"PO-Revision-Date: 2026-11-10 16:32:50\n"
 "Last-Translator: Peter Triesberger\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -13,11 +13,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 
+msgid "Bright mode selected"
+msgstr "Heller Modus ausgewählt"
+
 msgid "Change theme"
 msgstr "Designtheme wechseln"
 
 msgid "Close"
 msgstr "Schließen"
+
+msgid "Dark mode selected"
+msgstr "Dunkler Modus ausgewählt"
 
 msgid "GUI Theme"
 msgstr "GUI-Theme"
@@ -25,5 +31,11 @@ msgstr "GUI-Theme"
 msgid "Options"
 msgstr "Optionen"
 
+msgid "Please restart novelibre now to apply changed colors"
+msgstr "Bitte starten Sie novelibre erneut, um die geänderten Farben anzuwenden"
+
 msgid "Theme Changer"
 msgstr "Theme-Wechsler"
+
+msgid "Theme changed"
+msgstr "Theme gewechselt"

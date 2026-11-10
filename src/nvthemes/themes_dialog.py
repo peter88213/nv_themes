@@ -7,20 +7,27 @@ License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 from tkinter import ttk
 
 from nvlib.gui.widgets.modal_dialog import ModalDialog
+from nvthemes.dark_mode import DarkMode
 from nvthemes.nvthemes_locale import _
 import tkinter as tk
 
 
 class ThemesDialog(ModalDialog):
 
+    DARK_THEMES = (
+        'black',
+        'equilux',
+    )
+
     def __init__(self, view, prefs, extraThemes, **kw):
         super().__init__(view, **kw)
 
+        self._prefs = prefs
         self.title(_('Theme Changer'))
         # Combobox for theme setting.
 
         def change_theme(event):
-            theme = themeVar.get()
+            theme = self._themeVar.get()
             prefs['gui_theme'] = theme
             try:
                 if extraThemes:
@@ -42,13 +49,13 @@ class ThemesDialog(ModalDialog):
             padx=5,
         )
 
-        theme = view.guiStyle.theme_use()
+        currentTheme = view.guiStyle.theme_use()
         themeList = list(view.guiStyle.theme_names())
         themeList.sort()
-        themeVar = tk.StringVar(value=theme)
+        self._themeVar = tk.StringVar(value=currentTheme)
         themeCombobox = ttk.Combobox(
             themeFrame,
-            textvariable=themeVar,
+            textvariable=self._themeVar,
             values=themeList,
         )
         themeCombobox.pack(padx=5, pady=5)
@@ -61,6 +68,13 @@ class ThemesDialog(ModalDialog):
         ttk.Button(
             footer,
             text=_('Close'),
-            command=self.destroy,
+            command=self._on_close,
         ).pack(side='right', padx=5, pady=5)
+
+    def _on_close(self, event=None):
+        if self._themeVar.get() in self.DARK_THEMES:
+            DarkMode.start(self._prefs)
+        else:
+            DarkMode.stop(self._prefs)
+        self.destroy()
 

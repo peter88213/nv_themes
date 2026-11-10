@@ -62,6 +62,9 @@ def install(zipped):
         print(f'Copying locale ...')
         copy_tree('locale', applicationDir)
 
+        # Install utility.
+        copy_file('restore_default_colors.py', applicationDir)
+
         # Show a success message.
         print(
             f'\nSucessfully installed {PLUGIN} '

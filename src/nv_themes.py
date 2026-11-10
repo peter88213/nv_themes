@@ -27,6 +27,7 @@ GNU General Public License for more details.
 """
 from nvthemes.nvthemes_locale import _
 from nvlib.controller.plugin.plugin_base import PluginBase
+from nvlib.gui.default_colors import DEFAULT_COLORS
 from nvthemes.themes_dialog import ThemesDialog
 
 try:
@@ -39,7 +40,7 @@ except ModuleNotFoundError:
 class Plugin(PluginBase):
     """A 'Theme Changer' plugin class."""
     VERSION = '@release'
-    API_VERSION = '5.0'
+    API_VERSION = '5.67'
     DESCRIPTION = 'Allows changing between available themes'
     URL = 'https://github.com/peter88213/nv_themes'
 
@@ -86,3 +87,8 @@ class Plugin(PluginBase):
         )
         view.viewMenu.insert_separator(_('Options'))
 
+    def uninstall(self):
+        """Reset the preferences to default colors."""
+        prefs = self._ctrl.get_preferences()
+        for color in DEFAULT_COLORS:
+            prefs[color] = DEFAULT_COLORS[color]
