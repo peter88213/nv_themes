@@ -5,6 +5,14 @@
 ## Changelog
 
 
+### Version 5.1.2
+
+- Uninstaller clearing the theme setting.
+
+API: 5.67
+Based on novelibre 5.67.4
+
+
 ### Version 5.1.1
 
 - Adapted the color palette to the "black" theme.
