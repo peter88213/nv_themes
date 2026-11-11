@@ -40,7 +40,7 @@ class ThemesDialog(ModalDialog):
                 pass
 
         themeFrame = ttk.Frame(self)
-        themeFrame.pack(fill='x', expand=True, pady=2)
+        themeFrame.pack(fill='x', expand=True)
         ttk.Label(
             themeFrame,
             text=_('GUI Theme'),
