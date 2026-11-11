@@ -1,4 +1,4 @@
-[![Download the latest release](docs/img/download-button.png)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.1.2.pyz)
+[![Download the latest release](docs/img/download-button.png)](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.1.3.pyz)
 [![Changelog](docs/img/changelog-button.png)](docs/changelog.md)
 [![News/Feedback](docs/img/news-button.png)](https://github.com/peter88213/novelibre/discussions)
 [![Online help](docs/img/help-button.png)](https://peter88213.github.io/nvhelp-en/nv_themes/)
@@ -11,7 +11,6 @@ The [novelibre](https://github.com/peter88213/novelibre/) Python program helps a
 *nv_themes* is a plugin providing a theme changer dialog. 
 
 ![Screenshot](docs/Screenshots/screen01.png)
-
 
 ## Side note
 
@@ -37,10 +36,10 @@ Under Linux, you can choose between the *black* theme and the *equilux* theme.
 
 ### Default: Executable Python zip archive
 
-Download the latest release [nv_themes_v5.1.2.pyz](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.1.2.pyz) (17 KB)
+Download the latest release [nv_themes_v5.1.3.pyz](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.1.3.pyz) (17 KB)
 
-- Launch *nv_themes_v5.1.2.pyz* by double-clicking (Windows desktop),
-- or execute `python nv_themes_v5.1.2.pyz` (Windows), resp. `python3 nv_themes_v5.1.2.pyz` (Linux) on the command line.
+- Launch *nv_themes_v5.1.3.pyz* by double-clicking (Windows desktop),
+- or execute `python nv_themes_v5.1.3.pyz` (Windows), resp. `python3 nv_themes_v5.1.3.pyz` (Linux) on the command line.
 
 > [!IMPORTANT]
 > Many web browsers recognize the download as an executable file and offer to open it immediately. 
@@ -55,9 +54,9 @@ Download the latest release [nv_themes_v5.1.2.pyz](https://github.com/peter88213
 
 ### Alternative: Zip file
 
-The package is also available in zip format: [nv_themes_v5.1.2.zip](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.1.2.zip) (18 KB)
+The package is also available in zip format: [nv_themes_v5.1.3.zip](https://github.com/peter88213/nv_themes/raw/main/dist/nv_themes_v5.1.3.zip) (18 KB)
 
-- Extract the *nv_themes_v5.1.2* folder from the downloaded zipfile "nv_themes_v5.1.2.zip".
+- Extract the *nv_themes_v5.1.3* folder from the downloaded zipfile "nv_themes_v5.1.3.zip".
 - Move into this new folder and launch *setup.py* by double-clicking (Windows/Linux desktop), 
 - or execute `python setup.py` (Windows), resp. `python3 setup.py` (Linux) on the command line.
 

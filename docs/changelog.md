@@ -5,6 +5,14 @@
 ## Changelog
 
 
+### Version 5.1.3
+
+- Improved the dialog display in dark mode.
+
+API: 5.67
+Based on novelibre 5.67.4
+
+
 ### Version 5.1.2
 
 - Uninstaller clearing the theme setting.
