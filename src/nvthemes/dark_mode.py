@@ -6,8 +6,8 @@ License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 from tkinter import messagebox
 
-from nvlib.gui.default_colors import DEFAULT_COLORS
 from nvlib.gui.dark_mode_colors import DARK_MODE_COLORS
+from nvlib.gui.default_colors import DEFAULT_COLORS
 from nvthemes.nvthemes_locale import _
 
 
